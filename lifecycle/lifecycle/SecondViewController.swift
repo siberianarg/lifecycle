@@ -1,7 +1,7 @@
 //
 //  SecondViewController.swift
 //  lifecycle
-//
+//  ViewController Lifecycle
 //  Created by siberianarg on 08.11.2023.
 //
 

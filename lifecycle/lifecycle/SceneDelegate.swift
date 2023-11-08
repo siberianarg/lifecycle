@@ -1,7 +1,7 @@
 //
 //  SceneDelegate.swift
 //  lifecycle
-//
+//  App Lifecycle
 //  Created by siberianarg on 08.11.2023.
 //
 
@@ -11,11 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
@@ -24,34 +20,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
     }
 
-    func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+    func sceneDidDisconnect(_ scene: UIScene) {//5 after 3
+        print(#function + "Приложение ВЫКЛЮЧЕНО")
     }
 
-    func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    func sceneDidBecomeActive(_ scene: UIScene) { //2
+        print(#function + "FORGRAUND ACTIVE - Активное: становится приложением переднего плана")
     }
 
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+    func sceneWillResignActive(_ scene: UIScene) { //3
+        print(#function + "INACTIVE - Уходит из режима переднего плана")
     }
 
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+    func sceneWillEnterForeground(_ scene: UIScene) { //1
+        print(#function + "FORGRAUND INACTIVE приложение передается из фона на передний план")
     }
 
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+    func sceneDidEnterBackground(_ scene: UIScene) { //4
+        print(#function + "BACKGROUND ~1 sec -> приложение перешло в фоновый режим и может быть выключено в любое время")
     }
-
-
 }
 
