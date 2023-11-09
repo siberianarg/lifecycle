@@ -2,16 +2,16 @@
 # ViewController lifecycle
 <img width="1211" alt="image" src="https://github.com/siberianarg/lifecycle/assets/99109874/8ed89c8e-69aa-4d36-9908-8bea5b424e65">
 
-1. init - установка свойств vc;
+1. init - установка свойств VC;
 2. loadView - подмена стандартной view на кастомную;
 3. viewDidLoad - view нашего VC создано, используется для заполнения UI;
-4. viewWillAppear - VC начинает появлять на экране, используется для обновления UI данными, которые могли измениться, пока VC не отображался на экране;
-5. viewWillLayoutSubviews - вызывается перед тем как view нашего ус, разместит свои subviews. Границы окончательно подсчитаны.
-6. viewDidLayoutSubviews - уведомляет, что view нашего ис только что разместила свои subviews;
-7. viewDidAppear - вызывается как только ис появился на экране;
+4. viewWillAppear - VC начинает появляться на экране, используется для обновления UI данными, которые могли измениться, пока VC не отображался на экране;
+5. viewWillLayoutSubviews - вызывается перед тем, как view нашего VC, разместит свои subviews. Границы окончательно подсчитаны.
+6. viewDidLayoutSubviews - уведомляет, что view нашего VC только что разместила свои subviews;
+7. viewDidAppear - вызывается как только VC появился на экране;
 8. viewWilDisappear - VC начинает удаляться с экрана;
 9. viewDidDisappear - VC удален с экрана;
-10. deinit - деинициализация v, удаление из памяти устройства;
+10. deinit - деинициализация VC, удаление из памяти устройства;
 
 # App lifecycle
 
